@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { clientMapa } from "../client";
-import { MarkerData, MarketDataBack, ResponseListaMarcadores } from "../types";
+import { MarkerData, ResponseListaMarcadores } from "../types";
 
 export const getListaMarcadores = async (
 ): Promise<ResponseListaMarcadores> => {

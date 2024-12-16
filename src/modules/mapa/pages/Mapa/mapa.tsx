@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect, useCallback } from "react";
 import {
@@ -115,7 +116,7 @@ export const Mapa: React.FC = () => {
 
     fetchGeoJson();
     fetchData();
-  }, []);
+  }, );
 
   const onOpenModal = (comuna: ComunaProperties) => {
     setSelectedComuna(comuna);

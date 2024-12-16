@@ -27,7 +27,6 @@ const FilterMenu: React.FC<FilterMenuProps> = ({
   showColors,
   showCicloRuta,
   showRios,
-  onOpenModal,
   onToggleCicloRutas,
   onToggleRios,
 }) => {
