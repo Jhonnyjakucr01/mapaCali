@@ -1,0 +1,1 @@
+export {BienvenidosRoutes} from "./bienvenidosRoutes"
