@@ -78,7 +78,7 @@ const CreateMarkerModal: React.FC<{
             </Select.Option>
             <Select.Option value="robos">Robos</Select.Option>
             <Select.Option value="foto multas">Foto multas</Select.Option>
-            <Select.Option value="mal estado vias">Vías Dañadas</Select.Option>
+            <Select.Option value="hueco">Huecos</Select.Option>
           </Select>
         </Form.Item>
 

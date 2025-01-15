@@ -17,9 +17,15 @@
         "bibliotecas" : 2,
         "hoteles" : 0,
         "seguridad" : "seguridad",
-        "homicidios" :105,
         "hurtos": 540,
-        "suicidios" : 8
+        "suicidios" : 8,
+        "homicidios2022": 14,
+        "homicidios2023": 16,
+        "hurto2018" : 110,
+        "hurto2019" : 114,
+        "accidenteT2018" : 132,
+        "accidenteT2019" : 135
+
       },
 
       "geometry": {
@@ -59,9 +65,16 @@
         "bibliotecas" : 10,
         "hoteles" : 75,
         "seguridad" : "seguridad",
-        "homicidios" :23,
         "hurtos": 1367,
-        "suicidios" : 8
+        "suicidios" : 8,
+        "homicidios2022": 29,
+        "homicidios2023": 29,
+        "hurto2018" : 1241,
+        "hurto2019" : 1698,
+        "accidenteT2018" : 1699,
+        "accidenteT2019" : 1568
+
+
 
       },
       "geometry": {
@@ -128,9 +141,15 @@
         "bibliotecas" : 14,
         "hoteles" : 41,
         "seguridad" : "seguridad",
-        "homicidios" :29,
         "hurtos": 1532,
-        "suicidios" : 2
+        "suicidios" : 2,
+        "homicidios2022": 34,
+        "homicidios2023": 44,        
+        "hurto2018" : 1903,
+        "hurto2019" : 2172,
+        "accidenteT2018" : 880,
+        "accidenteT2019" : 866
+
       },
       "geometry": {
         "type": "Polygon",
@@ -187,9 +206,14 @@
         "bibliotecas" : 2,
         "hoteles" : 7,
         "seguridad" : "seguridad",
-        "homicidios" :27,
         "hurtos": 540,
-        "suicidios" : 3
+        "suicidios" : 3,
+        "homicidios2022": 28,
+        "homicidios2023": 29,
+        "hurto2018" : 665,
+        "hurto2019" : 771,
+        "accidenteT2018" : 715,
+        "accidenteT2019" : 755
 
       },
       "geometry": {
@@ -253,9 +277,14 @@
         "bibliotecas" : 2,
         "hoteles" : 0,
         "seguridad" : "seguridad",
-        "homicidios" :14,
         "hurtos": 411,
-        "suicidios" : 3
+        "suicidios" : 3,
+        "homicidios2022": 16,
+        "homicidios2023": 9,
+        "hurto2018" : 686,
+        "hurto2019" : 865,
+        "accidenteT2018" : 510,
+        "accidenteT2019" : 454
 
       },
       "geometry": {
@@ -298,11 +327,14 @@
         "bibliotecas" : 1,
         "hoteles" : 0,
         "seguridad" : "seguridad",
-        "homicidios" :46,
         "hurtos": 404,
-        "suicidios" : 3
-
-
+        "suicidios" : 3,
+        "homicidios2022": 42,
+        "homicidios2023": 50,
+        "hurto2018" : 626,
+        "hurto2019" : 808,
+        "accidenteT2018" : 295,
+        "accidenteT2019" : 322
       },
       "geometry": {
         "type": "Polygon",
@@ -365,9 +397,14 @@
         "bibliotecas" : 4,
         "hoteles" : 0,
         "seguridad" : "seguridad",
-        "homicidios" :47,
         "hurtos": 356,
-        "suicidios" : 2
+        "suicidios" : 2,
+        "homicidios2022": 24,
+        "homicidios2023": 30,
+        "hurto2018" : 438,
+        "hurto2019" : 477,
+        "accidenteT2018" : 482,
+        "accidenteT2019" : 410
       },
       "geometry": {
         "type": "Polygon",
@@ -422,9 +459,14 @@
         "bibliotecas" : 1,
         "hoteles" : 0,
         "seguridad" : "seguridad",
-        "homicidios" :30,
         "hurtos": 592,
-        "suicidios" : 3
+        "suicidios" : 3,
+        "homicidios2022": 37,
+        "homicidios2023": 35,
+        "hurto2018" : 980,
+        "hurto2019" : 1179,
+        "accidenteT2018" : 699,
+        "accidenteT2019" : 659
       },
       "geometry": {
         "type": "Polygon",
@@ -492,9 +534,14 @@
         "bibliotecas" : 1,
         "hoteles" : 2,
         "seguridad" : "seguridad",
-        "homicidios" :32,
         "hurtos":607,
-        "suicidios" : 4
+        "suicidios" : 4,
+        "homicidios2022": 39,
+        "homicidios2023": 48,
+        "hurto2018" : 1087,
+        "hurto2019" : 1174,
+        "accidenteT2018" : 616,
+        "accidenteT2019" : 576
       },
       "geometry": {
         "type": "Polygon",
@@ -541,9 +588,14 @@
         "bibliotecas" : 2,
         "hoteles" : 1,
         "seguridad" : "seguridad",
-        "homicidios" :55,
         "hurtos":514,
-        "suicidios" : 6
+        "suicidios" : 6,
+        "homicidios2022": 31,
+        "homicidios2023": 29,
+        "hurto2018" : 1044,
+        "hurto2019" : 1003,
+        "accidenteT2018" : 515,
+        "accidenteT2019" : 448
       },
       "geometry": {
         "type": "Polygon",
@@ -591,9 +643,14 @@
         "bibliotecas" : 2,
         "hoteles" : 0,
         "seguridad" : "seguridad",
-        "homicidios" :54,
         "hurtos":339,
-        "suicidios" : 3
+        "suicidios" : 3,
+        "homicidios2022": 41,
+        "homicidios2023": 30,
+        "hurto2018" : 599,
+        "hurto2019" : 796,
+        "accidenteT2018" : 537,
+        "accidenteT2019" : 496
       },
       "geometry": {
         "type": "Polygon",
@@ -639,9 +696,14 @@
         "bibliotecas" : 1,
         "hoteles" : 0,
         "seguridad" : "seguridad",
-        "homicidios" :42,
         "hurtos":206,
-        "suicidios" : 7
+        "suicidios" : 7,
+        "homicidios2022": 35,
+        "homicidios2023": 29,
+        "hurto2018" : 326,
+        "hurto2019" : 461,
+        "accidenteT2018" : 406,
+        "accidenteT2019" : 377
       },
       "geometry": {
         "type": "Polygon",
@@ -701,9 +763,14 @@
         "bibliotecas" : 4,
         "hoteles" : 0,
         "seguridad" : "seguridad",
-        "homicidios" :105,
         "hurtos":540,
-        "suicidios" : 8
+        "suicidios" : 8,
+        "homicidios2022": 78,
+        "homicidios2023": 116,
+        "hurto2018" : 555,
+        "hurto2019" : 767,
+        "accidenteT2018" : 331,
+        "accidenteT2019" : 273
       },
       "geometry": {
         "type": "Polygon",
@@ -753,9 +820,14 @@
         "bibliotecas" : 3,
         "hoteles" : 0,
         "seguridad" : "seguridad",
-        "homicidios" :111,
         "hurtos":443,
-        "suicidios" : 9
+        "suicidios" : 9,
+        "homicidios2022": 104,
+        "homicidios2023": 68,
+        "hurto2018" : 613,
+        "hurto2019" : 720,
+        "accidenteT2018" : 256,
+        "accidenteT2019" : 245
       },
       "geometry": {
         "type": "Polygon",
@@ -812,9 +884,14 @@
         "bibliotecas" : 4,
         "hoteles" : 0,
         "seguridad" : "seguridad",
-        "homicidios" :113,
         "hurtos":442,
-        "suicidios" : 7
+        "suicidios" : 7,
+        "homicidios2022": 103,
+        "homicidios2023": 125,
+        "hurto2018" : 657,
+        "hurto2019" : 808,
+        "accidenteT2018" : 261,
+        "accidenteT2019" : 303
       },
       "geometry": {
         "type": "Polygon",
@@ -868,9 +945,14 @@
         "bibliotecas" : 3,
         "hoteles" : 0,
         "seguridad" : "seguridad",
-        "homicidios" :40,
         "hurtos":248,
-        "suicidios" : 2
+        "suicidios" : 2,
+        "homicidios2022": 33,
+        "homicidios2023": 37,
+        "hurto2018" : 461,
+        "hurto2019" : 534,
+        "accidenteT2018" : 301,
+        "accidenteT2019" : 256
       },
       "geometry": {
         "type": "Polygon",
@@ -932,9 +1014,14 @@
         "bibliotecas" : 8,
         "hoteles" : 9,
         "seguridad" : "seguridad",
-        "homicidios" :32,
         "hurtos":1415,
-        "suicidios" : 4
+        "suicidios" : 4,
+        "homicidios2022": 26,
+        "homicidios2023": 30,
+        "hurto2018" : 2022,
+        "hurto2019" : 2344,
+        "accidenteT2018" : 1611,
+        "accidenteT2019" : 1563
       },
       "geometry": {
         "type": "Polygon",
@@ -1033,9 +1120,14 @@
         "bibliotecas" : 5,
         "hoteles" : 9,
         "seguridad" : "seguridad",
-        "homicidios" :61,
         "hurtos":411,
-        "suicidios" : 5
+        "suicidios" : 5,
+        "homicidios2022": 76,
+        "homicidios2023": 69,
+        "hurto2018" : 562,
+        "hurto2019" : 619,
+        "accidenteT2018" : 304,
+        "accidenteT2019" : 257
       },
       "geometry": {
         "type": "Polygon",
@@ -1143,9 +1235,14 @@
         "bibliotecas" : 9,
         "hoteles" : 39,
         "seguridad" : "seguridad",
-        "homicidios" :29,
         "hurtos":1540,
-        "suicidios" : 6
+        "suicidios" : 6,
+        "homicidios2022": 31,
+        "homicidios2023": 31,
+        "hurto2018" : 2624,
+        "hurto2019" : 2959,
+        "accidenteT2018" : 1534,
+        "accidenteT2019" : 1490
       },
       "geometry": {
         "type": "Polygon",
@@ -1321,9 +1418,14 @@
         "bibliotecas" : 3,
         "hoteles" : 0,
         "seguridad" : "seguridad",
-        "homicidios" :54,
         "hurtos":148,
-        "suicidios" : 3
+        "suicidios" : 3,
+        "homicidios2022": 66,
+        "homicidios2023": 49,
+        "hurto2018" : 206,
+        "hurto2019" : 234,
+        "accidenteT2018" : 133,
+        "accidenteT2019" : 102
       },
       "geometry": {
         "type": "Polygon",
@@ -1435,9 +1537,14 @@
         "bibliotecas" : 4,
         "hoteles" : 0,
         "seguridad" : "seguridad",
-        "homicidios" :79,
         "hurtos":483,
-        "suicidios" : 6
+        "suicidios" : 6,
+        "homicidios2022": 70,
+        "homicidios2023": 78,
+        "hurto2018" : 573,
+        "hurto2019" : 696,
+        "accidenteT2018" : 279,
+        "accidenteT2019" : 198
       },
       "geometry": {
         "type": "Polygon",
@@ -1525,9 +1632,14 @@
         "bibliotecas" : 6,
         "hoteles" : 11,
         "seguridad" : "seguridad",
-        "homicidios" :3,
         "hurtos":281,
-        "suicidios" : 1
+        "suicidios" : 1,
+        "homicidios2022": 2,
+        "homicidios2023": 4,
+        "hurto2018" : 484,
+        "hurto2019" : 484,
+        "accidenteT2018" : 822,
+        "accidenteT2019" : 817
       },
       "geometry": {
         "type": "Polygon",
