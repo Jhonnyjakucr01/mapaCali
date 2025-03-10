@@ -388,7 +388,7 @@ const FilterMenu: React.FC<FilterMenuProps> = ({
           </Menu.SubMenu>
 
           <Menu.SubMenu key="services" title="Servicios">
-            <Menu.Item key="hospitales">Hospitales</Menu.Item>
+            <Menu.Item key="hospital">Hospitales</Menu.Item>
             <Menu.Item key="hoteles">Hoteles</Menu.Item>
             <Menu.Item key="bancos">Bancos</Menu.Item>
             <Menu.Item key="estaciones mio">Estaciones MIO</Menu.Item>
