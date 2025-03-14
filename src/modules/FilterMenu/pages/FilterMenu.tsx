@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from "react";
+import React, { useState } from "react";
 import { Menu, Switch, Card, Space, Collapse } from "antd";
 import { MenuProps } from "antd/es/menu";
 import { ComunaProperties } from "../../../services/types";
@@ -12,6 +12,7 @@ import {
 } from "@ant-design/icons"; // Iconos de Ant Design
 import { FaSkullCrossbones, FaCarCrash  } from "react-icons/fa";
 import { GiRobber } from "react-icons/gi";
+import HospitalsList from "../../mapa/pages/google/googleMaps";
 
 interface FilterMenuProps {
   onFilterChange: (selectedKeys: string[]) => void;
@@ -107,6 +108,12 @@ const FilterMenu: React.FC<FilterMenuProps> = ({
 
   const handleAccidentesA2019= (checked: boolean) => {
     onToggleAccidentesA2019(checked);
+  };
+
+  const [showHospitals, setShowHospitals] = useState(false);
+
+  const handleHospitalsChange = (checked: boolean) => {
+    setShowHospitals(checked);
   };
 
 
@@ -265,6 +272,7 @@ const FilterMenu: React.FC<FilterMenuProps> = ({
             onChange={handleHomicidios2023}
           />
         </div>
+
       </Panel>
     </Collapse>
 
@@ -420,6 +428,7 @@ const FilterMenu: React.FC<FilterMenuProps> = ({
             <Menu.Item key="cais">CAIS Policia</Menu.Item>
             <Menu.Item key="hueco">huecos</Menu.Item>
           </Menu.SubMenu>
+
         </Menu.SubMenu>
       </Menu>
     </div>

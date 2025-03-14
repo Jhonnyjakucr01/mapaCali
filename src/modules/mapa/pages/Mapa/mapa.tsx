@@ -97,6 +97,9 @@ export const Mapa: React.FC = () => {
   const [heatmapDataAA2018, setHeatmapDataAA2018] = useState([]);
   const [heatmapDataAA2019, setHeatmapDataAA2019] = useState([]);
 
+
+
+
   useEffect(() => {
     const fetchGeoJson = async () => {
       try {
