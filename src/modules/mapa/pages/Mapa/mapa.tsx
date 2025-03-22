@@ -145,12 +145,12 @@ export const Mapa: React.FC = () => {
             return [centroid[1], centroid[0], normalizedRadius];
           });
 
-        const maxIntensity2023 = Math.max(
-          ...comunasData.features.map(
-            (feature: { properties: { [x: string]: any } }) =>
-              feature.properties["homicidios2023"] || 0
-          )
-        );
+        // const maxIntensity2023 = Math.max(
+        //   ...comunasData.features.map(
+        //     (feature: { properties: { [x: string]: any } }) =>
+        //       feature.properties["homicidios2023"] || 0
+        //   )
+        // );
 
         const heatData2023 = comunasData.features
           .filter(

@@ -3,6 +3,7 @@ import { RoutesWithNotFound } from "../modules/common/components/RoutesWithNotFo
 import { Bienvenidos } from "../modules/bienvenidos/pages";
 import Mapa from "../modules/mapa/pages/Mapa/mapa";
 import ApiGoogle from "../modules/mapa/pages/google/googleMaps";
+import UploadExcel from "../modules/mapa/pages/proyecciones/proyecciones";
 
 export const AdminRoutes = () => {
   return (
@@ -11,10 +12,11 @@ export const AdminRoutes = () => {
         <Route path="/" element={<Bienvenidos />}></Route>
         <Route path="/map" element={<Mapa />}></Route>
         <Route path="/api-google" element={<ApiGoogle />}></Route>
+        <Route path="/proyecciones" element={<UploadExcel />}></Route>
 
 
 
-
+        
       </RoutesWithNotFound>
     </>
   );

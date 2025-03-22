@@ -21,14 +21,18 @@ const CategoriaCard: React.FC<{ titulo: string; tipo: string; color: string }> =
     setLoading(true);
     try {
       const data = await obtenerDatos(tipo);
-      if (data.results && data.results.length > 0) {
-        const datosFormateados = data.results.map((item: any) => ({
+      
+      // Si la respuesta es un array directamente, lo usamos
+      const resultados = Array.isArray(data) ? data : data.results || [];
+  
+      if (resultados.length > 0) {
+        const datosFormateados = resultados.map((item: any) => ({
           name: item.name,
           lat: item.geometry.location.lat,
           lng: item.geometry.location.lng,
         }));
         setDatos(datosFormateados);
-        message.success(`Se encontraron ${data.results.length} resultados en ${titulo}`);
+        message.success(`Se encontraron ${resultados.length} resultados en ${titulo}`);
       } else {
         message.warning(`No se encontraron datos en ${titulo}`);
       }
@@ -38,6 +42,7 @@ const CategoriaCard: React.FC<{ titulo: string; tipo: string; color: string }> =
       setLoading(false);
     }
   };
+  
 
   const generarExcel = () => {
     const ws = XLSX.utils.json_to_sheet(datos);

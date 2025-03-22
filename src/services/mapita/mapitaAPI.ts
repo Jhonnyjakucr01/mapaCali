@@ -13,6 +13,7 @@ export const getListaMarcadores =
     };
   };
 
+  
 export const getIconPorCategory = async (category: string): Promise<string> => {
   const response = await clientMapa.get<{ iconUrl: string }>(
     `icono-por-categoria/${category}`
@@ -29,6 +30,7 @@ export const crearMarcadorMapa = async (marker: MarkerData): Promise<any> => {
 };
 
 
+
 export const obtenerDatos = async (tipo: string): Promise<any> => {
   try {
     const response = await clientMapa.get<any>(`obtener-datos-google/${tipo}`, {
@@ -40,6 +42,27 @@ export const obtenerDatos = async (tipo: string): Promise<any> => {
     throw error;
   }
 };
+
+
+export const proyeccionesCali = async (file: File): Promise<any> => {
+  try {
+    const formData = new FormData();
+    formData.append("archivo", file);
+
+    const response = await clientMapa.post<any>("proyecciones-cali", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error("Error al obtener las proyecciones de Cali:", error);
+    throw error;
+  }
+};
+
 
 
 
