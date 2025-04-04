@@ -64,6 +64,24 @@ export const proyeccionesCali = async (file: File): Promise<any> => {
 };
 
 
+export const clusterCali = async (formData: FormData): Promise<any> => {
+  try {
+    const response = await clientMapa.post<any>("cluster-cali", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error("Error al obtener las proyecciones de Cali:", error);
+    throw error;
+  }
+};
+
+
+
 
 
 

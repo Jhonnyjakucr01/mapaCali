@@ -382,7 +382,7 @@ const FilterMenu: React.FC<FilterMenuProps> = ({
         <Menu.Item key="comunas">Comunas</Menu.Item>
 
           <Menu.SubMenu key="education" title="Educación">
-            <Menu.Item key="colegios">Colegios</Menu.Item>
+            <Menu.Item key="colegio">Colegios</Menu.Item>
             <Menu.Item key="universidades">Universidades</Menu.Item>
             <Menu.Item key="biblioteca">Bibliotecas</Menu.Item>
           </Menu.SubMenu>

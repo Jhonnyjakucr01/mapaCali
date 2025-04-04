@@ -417,7 +417,7 @@ export const Mapa: React.FC = () => {
       case "hospitales":
         iconComponent = <FaHospital size={20} color="yellow" />;
         break;
-      case "colegios":
+      case "colegio":
         iconComponent = <FaSchool size={20} color="blue" />;
         break;
       case "estaciones mio":
