@@ -105,6 +105,16 @@ const ClusteringCali: React.FC = () => {
     },
   ];
 
+  const renderTable = (title: string, data: any[], columns: any[]) => (
+    <Card title={title} className="shadow-md">
+      <Table
+        dataSource={data.map((item: any, index: number) => ({ ...item, key: index }))}
+        columns={columns}
+        pagination={false}
+      />
+    </Card>
+  );
+
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white shadow-lg rounded-xl">
       <Title level={2} className="text-center mb-6">
@@ -134,54 +144,108 @@ const ClusteringCali: React.FC = () => {
       )}
 
       {results && (
-        <div className="space-y-6">
-          {/* Resumen */}
-          <Card title="Resumen del Análisis" className="shadow-md">
-            <Paragraph><strong>Clusters Óptimos:</strong> {results.optimal_clusters}</Paragraph>
-            <Paragraph><strong>Silhouette Score:</strong> {results.silhouette_score.toFixed(3)}</Paragraph>
-            <Paragraph><strong>Mejor Comuna:</strong> {results.best_comuna}</Paragraph>
-            <Paragraph><strong>Peor Comuna:</strong> {results.worst_comuna}</Paragraph>
-          </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Columna izquierda */}
+          <div className="space-y-6">
+            {/* Resumen */}
+            <Card title="Resumen del Análisis" className="shadow-md">
+              <Paragraph><strong>Clusters Óptimos:</strong> {results.optimal_clusters}</Paragraph>
+              <Paragraph><strong>Silhouette Score:</strong> {results.silhouette_score.toFixed(3)}</Paragraph>
+              <Paragraph><strong>Mejor Comuna:</strong> {results.best_comuna}</Paragraph>
+              <Paragraph><strong>Peor Comuna:</strong> {results.worst_comuna}</Paragraph>
+            </Card>
 
-          {/* Gráficas */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Gráficas */}
             {results.cluster_plot && renderImageCard("Clusters Identificados", results.cluster_plot, "Clusters")}
             {results.elbow_plot && renderImageCard("Método del Codo", results.elbow_plot, "Elbow")}
             {results.silhouette_plot && renderImageCard("Gráfico de Silueta", results.silhouette_plot, "Silhouette")}
           </div>
 
-          {/* Tabla */}
-          {results.clusters && (
-            <Card title="Asignación de Clusters por Comuna" extra={
-              <Space>
-                <Button icon={<FileExcelOutlined />} onClick={handleExportExcel}>Exportar Excel</Button>
-                <Button icon={<FilePdfOutlined />} onClick={handleExportPDF}>Exportar PDF</Button>
-              </Space>
-            }>
-              <Table
-                dataSource={results.clusters.map((item: any, index: number) => ({ ...item, key: index }))}
-                columns={columns}
-                pagination={false}
-              />
-            </Card>
-          )}
+          {/* Columna derecha */}
+          <div className="space-y-6">
+            {/* Tabla */}
+            {results.clusters && (
+              <Card title="Asignación de Clusters por Comuna" extra={
+                <Space>
+                  <Button icon={<FileExcelOutlined />} onClick={handleExportExcel}>Exportar Excel</Button>
+                  <Button icon={<FilePdfOutlined />} onClick={handleExportPDF}>Exportar PDF</Button>
+                </Space>
+              }>
+                <Table
+                  dataSource={results.clusters.map((item: any, index: number) => ({ ...item, key: index }))}
+                  columns={columns}
+                  pagination={false}
+                />
+              </Card>
+            )}
 
-          {/* Descripción */}
-          <Card title="Explicación Detallada del Análisis" className="shadow-md">
-            <Typography>
-              <Paragraph>
-                Este análisis agrupa las 22 comunas de Cali basándose en características positivas (infraestructura, servicios)
-                y negativas (criminalidad, fotomultas).
-              </Paragraph>
-              <ol style={{ paddingLeft: "1.5rem" }}>
-                <li><strong>Escalamiento:</strong> con <code>StandardScaler</code>.</li>
-                <li><strong>Elbow:</strong> para determinar el número ideal de clusters.</li>
-                <li><strong>KMeans:</strong> para agrupar comunas similares.</li>
-                <li><strong>Evaluación:</strong> con Silhouette Score.</li>
-                <li><strong>Visualización:</strong> de resultados mediante gráficos.</li>
-              </ol>
-            </Typography>
-          </Card>
+            {/* Grupos Naturales */}
+            {results.grupos_naturales && renderTable("Grupos Naturales", results.grupos_naturales, [
+              { title: "Cluster", dataIndex: "Cluster", key: "Cluster" },
+              ...Object.keys(results.grupos_naturales[0]).filter(key => key !== "Cluster").map(key => ({
+                title: key,
+                dataIndex: key,
+                key: key,
+              }))
+            ])}
+
+            {/* Patrones */}
+            {results.patrones && renderTable("Patrones de Clusters", results.patrones, [
+              { title: "Cluster", dataIndex: "Cluster", key: "Cluster" },
+              ...Object.keys(results.patrones[0]).filter(key => key !== "Cluster").map(key => ({
+                title: key,
+                dataIndex: key,
+                key: key,
+              }))
+            ])}
+
+            {/* Segmentación */}
+            {results.segmentacion && renderTable("Segmentación de Clusters", results.segmentacion, [
+              { title: "Cluster", dataIndex: "Cluster", key: "Cluster" },
+              { title: "Count", dataIndex: "count", key: "count" },
+            ])}
+
+            {/* Descripción */}
+            <Card title="Explicación Detallada del Análisis" className="shadow-md">
+  <Typography>
+    <Paragraph>
+      Este análisis agrupa las 22 comunas de Cali basándose en características positivas (infraestructura, servicios)
+      y negativas (criminalidad, fotomultas).
+    </Paragraph>
+    <ol style={{ paddingLeft: "1.5rem" }}>
+      <li><strong>Escalamiento:</strong> con <code>StandardScaler</code>.</li>
+      <li><strong>Elbow:</strong> para determinar el número ideal de clusters.</li>
+      <li><strong>KMeans:</strong> para agrupar comunas similares.</li>
+      <li><strong>Evaluación:</strong> con Silhouette Score.</li>
+      <li><strong>Visualización:</strong> de resultados mediante gráficos.</li>
+    </ol>
+    <Paragraph>
+      <strong>Grupos Naturales:</strong> Se refiere a la agrupación de comunas que comparten características similares. 
+      En el análisis, se calculan las medias de las características para cada cluster, lo que permite identificar las características promedio de cada grupo.
+      <br />
+    </Paragraph>
+    <Paragraph>
+      <strong>Patrones:</strong> Se refiere al análisis detallado de las características dentro de cada cluster. 
+      Se calculan la media y la desviación estándar de las características para cada cluster, lo que proporciona una visión más profunda de las variaciones y consistencias dentro de cada grupo.
+      <br />
+    </Paragraph>
+    <Paragraph>
+      <strong>Segmentación:</strong> Se refiere a la distribución de las comunas entre los diferentes clusters. 
+      Se cuenta el número de comunas en cada cluster, lo que muestra cómo se distribuyen las comunas en los grupos identificados.
+      <br />
+    </Paragraph>
+    <Paragraph>
+      <strong>Conclusiones:</strong>
+      <ul>
+        <li><strong>Grupos Naturales:</strong> Puedes identificar las características promedio de cada grupo de comunas, lo que ayuda a entender mejor las necesidades y fortalezas de cada grupo.</li>
+        <li><strong>Patrones:</strong> Puedes analizar las variaciones dentro de cada grupo, lo que permite identificar áreas que necesitan atención específica.</li>
+        <li><strong>Segmentación:</strong> Puedes ver cómo se distribuyen las comunas en los diferentes clusters, lo que ayuda en la planificación y asignación de recursos.</li>
+      </ul>
+    </Paragraph>
+  </Typography>
+</Card>
+
+          </div>
         </div>
       )}
 
