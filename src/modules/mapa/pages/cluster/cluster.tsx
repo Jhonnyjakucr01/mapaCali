@@ -33,6 +33,7 @@ const ClusteringCali: React.FC = () => {
     }
   };
 
+
   const handleUpload = async () => {
     if (!file) {
       message.warning("Por favor, seleccione un archivo Excel.");
@@ -159,6 +160,7 @@ const ClusteringCali: React.FC = () => {
             {results.cluster_plot && renderImageCard("Clusters Identificados", results.cluster_plot, "Clusters")}
             {results.elbow_plot && renderImageCard("Método del Codo", results.elbow_plot, "Elbow")}
             {results.silhouette_plot && renderImageCard("Gráfico de Silueta", results.silhouette_plot, "Silhouette")}
+            {results.score_plot && renderImageCard("Score por Comuna (Mejor a Peor)", results.score_plot, "Score Comuna")}
           </div>
 
           {/* Columna derecha */}
