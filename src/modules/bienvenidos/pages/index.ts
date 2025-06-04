@@ -1,0 +1,1 @@
+export {Bienvenidos} from "./bienvenidos"

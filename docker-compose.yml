@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: frontend-app
+    ports:
+      - "3000:80"  # Asegura que el frontend sea accesible en localhost:3000
+    restart: unless-stopped
+    depends_on:
+      - laravel-app  # Asegura que el frontend dependa de laravel-app (backend)
+    networks:
+      - backend_network  # Conexión a la misma red que el backend
+
+networks:
+  backend_network:
+    external: true  # Asegura que esta red externa se conecte con el backend
